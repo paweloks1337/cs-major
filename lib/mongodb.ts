@@ -3,6 +3,12 @@ import { MongoClient } from "mongodb";
 const uri = process.env.MONGODB_URI!;
 const options = {};
 
+// DODAJEMY TYP DLA GLOBAL
+declare global {
+  // eslint-disable-next-line no-var
+  var _mongoClientPromise: Promise<MongoClient> | undefined;
+}
+
 let client;
 let clientPromise: Promise<MongoClient>;
 
