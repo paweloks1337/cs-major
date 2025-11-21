@@ -1,4 +1,3 @@
-cat > lib/mongodb.ts <<'EOF'
 import { MongoClient } from "mongodb";
 
 const uri = process.env.MONGODB_URI!;
@@ -19,4 +18,3 @@ if (!global._mongoClientPromise) {
 
 clientPromise = global._mongoClientPromise as Promise<MongoClient>;
 export default clientPromise;
-EOF

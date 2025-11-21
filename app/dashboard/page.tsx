@@ -1,4 +1,3 @@
-cat > app/dashboard/page.tsx <<'EOF'
 import { cookies } from "next/headers";
 import { getSessionByToken } from "@/lib/auth";
 import Link from "next/link";
@@ -35,4 +34,3 @@ export default async function DashboardPage() {
     </div>
   );
 }
-EOF

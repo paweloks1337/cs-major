@@ -1,4 +1,3 @@
-cat > app/api/auth/logout/route.ts <<'EOF'
 import { NextResponse } from "next/server";
 import { deleteSessionByToken } from "@/lib/auth";
 
@@ -18,4 +17,3 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }
-EOF

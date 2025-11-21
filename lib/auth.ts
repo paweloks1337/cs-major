@@ -1,4 +1,3 @@
-cat > lib/auth.ts <<'EOF'
 import bcrypt from "bcryptjs";
 import { ObjectId } from "mongodb";
 import { randomBytes } from "crypto";
@@ -52,4 +51,3 @@ export async function deleteSessionByToken(token: string) {
   const client = await clientPromise;
   await client.db().collection("sessions").deleteOne({ token });
 }
-EOF
